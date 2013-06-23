@@ -1,0 +1,318 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		96440DB61762E40600B0295A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96440DB51762E40600B0295A /* UIKit.framework */; };
+		96440DB81762E40600B0295A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96440DB71762E40600B0295A /* Foundation.framework */; };
+		96440DBA1762E40600B0295A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96440DB91762E40600B0295A /* CoreGraphics.framework */; };
+		96440DC01762E40600B0295A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 96440DBE1762E40600B0295A /* InfoPlist.strings */; };
+		96440DC21762E40600B0295A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 96440DC11762E40600B0295A /* main.m */; };
+		96440DC61762E40600B0295A /* SAAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 96440DC51762E40600B0295A /* SAAppDelegate.m */; };
+		96440DC81762E40600B0295A /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 96440DC71762E40600B0295A /* Default.png */; };
+		96440DCA1762E40600B0295A /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 96440DC91762E40600B0295A /* Default@2x.png */; };
+		96440DCC1762E40600B0295A /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 96440DCB1762E40600B0295A /* Default-568h@2x.png */; };
+		96440DCF1762E40600B0295A /* SAViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96440DCE1762E40600B0295A /* SAViewController.m */; };
+		96440DD21762E40600B0295A /* SAViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96440DD01762E40600B0295A /* SAViewController_iPhone.xib */; };
+		96440DD51762E40600B0295A /* SAViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96440DD31762E40600B0295A /* SAViewController_iPad.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		96440DB21762E40600B0295A /* SAGameCenterManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SAGameCenterManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		96440DB51762E40600B0295A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		96440DB71762E40600B0295A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		96440DB91762E40600B0295A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		96440DBD1762E40600B0295A /* SAGameCenterManager-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SAGameCenterManager-Info.plist"; sourceTree = "<group>"; };
+		96440DBF1762E40600B0295A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		96440DC11762E40600B0295A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		96440DC31762E40600B0295A /* SAGameCenterManager-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SAGameCenterManager-Prefix.pch"; sourceTree = "<group>"; };
+		96440DC41762E40600B0295A /* SAAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SAAppDelegate.h; sourceTree = "<group>"; };
+		96440DC51762E40600B0295A /* SAAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SAAppDelegate.m; sourceTree = "<group>"; };
+		96440DC71762E40600B0295A /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		96440DC91762E40600B0295A /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		96440DCB1762E40600B0295A /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		96440DCD1762E40600B0295A /* SAViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SAViewController.h; sourceTree = "<group>"; };
+		96440DCE1762E40600B0295A /* SAViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SAViewController.m; sourceTree = "<group>"; };
+		96440DD11762E40600B0295A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/SAViewController_iPhone.xib; sourceTree = "<group>"; };
+		96440DD41762E40600B0295A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/SAViewController_iPad.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		96440DAF1762E40600B0295A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				96440DB61762E40600B0295A /* UIKit.framework in Frameworks */,
+				96440DB81762E40600B0295A /* Foundation.framework in Frameworks */,
+				96440DBA1762E40600B0295A /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		96440DA91762E40600B0295A = {
+			isa = PBXGroup;
+			children = (
+				96440DBB1762E40600B0295A /* SAGameCenterManager */,
+				96440DB41762E40600B0295A /* Frameworks */,
+				96440DB31762E40600B0295A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		96440DB31762E40600B0295A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				96440DB21762E40600B0295A /* SAGameCenterManager.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		96440DB41762E40600B0295A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				96440DB51762E40600B0295A /* UIKit.framework */,
+				96440DB71762E40600B0295A /* Foundation.framework */,
+				96440DB91762E40600B0295A /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		96440DBB1762E40600B0295A /* SAGameCenterManager */ = {
+			isa = PBXGroup;
+			children = (
+				96440DC41762E40600B0295A /* SAAppDelegate.h */,
+				96440DC51762E40600B0295A /* SAAppDelegate.m */,
+				96440DCD1762E40600B0295A /* SAViewController.h */,
+				96440DCE1762E40600B0295A /* SAViewController.m */,
+				96440DD01762E40600B0295A /* SAViewController_iPhone.xib */,
+				96440DD31762E40600B0295A /* SAViewController_iPad.xib */,
+				96440DBC1762E40600B0295A /* Supporting Files */,
+			);
+			path = SAGameCenterManager;
+			sourceTree = "<group>";
+		};
+		96440DBC1762E40600B0295A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				96440DBD1762E40600B0295A /* SAGameCenterManager-Info.plist */,
+				96440DBE1762E40600B0295A /* InfoPlist.strings */,
+				96440DC11762E40600B0295A /* main.m */,
+				96440DC31762E40600B0295A /* SAGameCenterManager-Prefix.pch */,
+				96440DC71762E40600B0295A /* Default.png */,
+				96440DC91762E40600B0295A /* Default@2x.png */,
+				96440DCB1762E40600B0295A /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		96440DB11762E40600B0295A /* SAGameCenterManager */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 96440DD81762E40600B0295A /* Build configuration list for PBXNativeTarget "SAGameCenterManager" */;
+			buildPhases = (
+				96440DAE1762E40600B0295A /* Sources */,
+				96440DAF1762E40600B0295A /* Frameworks */,
+				96440DB01762E40600B0295A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SAGameCenterManager;
+			productName = SAGameCenterManager;
+			productReference = 96440DB21762E40600B0295A /* SAGameCenterManager.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		96440DAA1762E40600B0295A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = SA;
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = shiningdevelopers;
+			};
+			buildConfigurationList = 96440DAD1762E40600B0295A /* Build configuration list for PBXProject "SAGameCenterManager" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 96440DA91762E40600B0295A;
+			productRefGroup = 96440DB31762E40600B0295A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				96440DB11762E40600B0295A /* SAGameCenterManager */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		96440DB01762E40600B0295A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				96440DC01762E40600B0295A /* InfoPlist.strings in Resources */,
+				96440DC81762E40600B0295A /* Default.png in Resources */,
+				96440DCA1762E40600B0295A /* Default@2x.png in Resources */,
+				96440DCC1762E40600B0295A /* Default-568h@2x.png in Resources */,
+				96440DD21762E40600B0295A /* SAViewController_iPhone.xib in Resources */,
+				96440DD51762E40600B0295A /* SAViewController_iPad.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		96440DAE1762E40600B0295A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				96440DC21762E40600B0295A /* main.m in Sources */,
+				96440DC61762E40600B0295A /* SAAppDelegate.m in Sources */,
+				96440DCF1762E40600B0295A /* SAViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		96440DBE1762E40600B0295A /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				96440DBF1762E40600B0295A /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		96440DD01762E40600B0295A /* SAViewController_iPhone.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				96440DD11762E40600B0295A /* en */,
+			);
+			name = SAViewController_iPhone.xib;
+			sourceTree = "<group>";
+		};
+		96440DD31762E40600B0295A /* SAViewController_iPad.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				96440DD41762E40600B0295A /* en */,
+			);
+			name = SAViewController_iPad.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		96440DD61762E40600B0295A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		96440DD71762E40600B0295A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		96440DD91762E40600B0295A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SAGameCenterManager/SAGameCenterManager-Prefix.pch";
+				INFOPLIST_FILE = "SAGameCenterManager/SAGameCenterManager-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		96440DDA1762E40600B0295A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SAGameCenterManager/SAGameCenterManager-Prefix.pch";
+				INFOPLIST_FILE = "SAGameCenterManager/SAGameCenterManager-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		96440DAD1762E40600B0295A /* Build configuration list for PBXProject "SAGameCenterManager" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				96440DD61762E40600B0295A /* Debug */,
+				96440DD71762E40600B0295A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		96440DD81762E40600B0295A /* Build configuration list for PBXNativeTarget "SAGameCenterManager" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				96440DD91762E40600B0295A /* Debug */,
+				96440DDA1762E40600B0295A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 96440DAA1762E40600B0295A /* Project object */;
+}
