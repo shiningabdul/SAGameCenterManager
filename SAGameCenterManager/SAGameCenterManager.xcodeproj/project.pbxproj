@@ -19,6 +19,8 @@
 		96440DCF1762E40600B0295A /* SAViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96440DCE1762E40600B0295A /* SAViewController.m */; };
 		96440DD21762E40600B0295A /* SAViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96440DD01762E40600B0295A /* SAViewController_iPhone.xib */; };
 		96440DD51762E40600B0295A /* SAViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96440DD31762E40600B0295A /* SAViewController_iPad.xib */; };
+		965C03441852BF4500636AA8 /* SAGameCenterManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 965C03431852BF4500636AA8 /* SAGameCenterManager.m */; };
+		965C03481852C1B200636AA8 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 965C03471852C1B200636AA8 /* GameKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +41,9 @@
 		96440DCE1762E40600B0295A /* SAViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SAViewController.m; sourceTree = "<group>"; };
 		96440DD11762E40600B0295A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/SAViewController_iPhone.xib; sourceTree = "<group>"; };
 		96440DD41762E40600B0295A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/SAViewController_iPad.xib; sourceTree = "<group>"; };
+		965C03421852BF4500636AA8 /* SAGameCenterManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SAGameCenterManager.h; sourceTree = "<group>"; };
+		965C03431852BF4500636AA8 /* SAGameCenterManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAGameCenterManager.m; sourceTree = "<group>"; };
+		965C03471852C1B200636AA8 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				965C03481852C1B200636AA8 /* GameKit.framework in Frameworks */,
 				96440DB61762E40600B0295A /* UIKit.framework in Frameworks */,
 				96440DB81762E40600B0295A /* Foundation.framework in Frameworks */,
 				96440DBA1762E40600B0295A /* CoreGraphics.framework in Frameworks */,
@@ -75,6 +81,7 @@
 		96440DB41762E40600B0295A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				965C03471852C1B200636AA8 /* GameKit.framework */,
 				96440DB51762E40600B0295A /* UIKit.framework */,
 				96440DB71762E40600B0295A /* Foundation.framework */,
 				96440DB91762E40600B0295A /* CoreGraphics.framework */,
@@ -87,6 +94,8 @@
 			children = (
 				96440DC41762E40600B0295A /* SAAppDelegate.h */,
 				96440DC51762E40600B0295A /* SAAppDelegate.m */,
+				965C03421852BF4500636AA8 /* SAGameCenterManager.h */,
+				965C03431852BF4500636AA8 /* SAGameCenterManager.m */,
 				96440DCD1762E40600B0295A /* SAViewController.h */,
 				96440DCE1762E40600B0295A /* SAViewController.m */,
 				96440DD01762E40600B0295A /* SAViewController_iPhone.xib */,
@@ -138,7 +147,17 @@
 			attributes = {
 				CLASSPREFIX = SA;
 				LastUpgradeCheck = 0460;
-				ORGANIZATIONNAME = shiningdevelopers;
+				ORGANIZATIONNAME = shiningabdul;
+				TargetAttributes = {
+					96440DB11762E40600B0295A = {
+						DevelopmentTeam = 559UUQT2Q5;
+						SystemCapabilities = {
+							com.apple.GameCenter = {
+								enabled = 0;
+							};
+						};
+					};
+				};
 			};
 			buildConfigurationList = 96440DAD1762E40600B0295A /* Build configuration list for PBXProject "SAGameCenterManager" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -180,6 +199,7 @@
 			files = (
 				96440DC21762E40600B0295A /* main.m in Sources */,
 				96440DC61762E40600B0295A /* SAAppDelegate.m in Sources */,
+				965C03441852BF4500636AA8 /* SAGameCenterManager.m in Sources */,
 				96440DCF1762E40600B0295A /* SAViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -273,10 +293,15 @@
 		96440DD91762E40600B0295A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SAGameCenterManager/SAGameCenterManager-Prefix.pch";
 				INFOPLIST_FILE = "SAGameCenterManager/SAGameCenterManager-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -284,10 +309,15 @@
 		96440DDA1762E40600B0295A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SAGameCenterManager/SAGameCenterManager-Prefix.pch";
 				INFOPLIST_FILE = "SAGameCenterManager/SAGameCenterManager-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -311,6 +341,7 @@
 				96440DDA1762E40600B0295A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

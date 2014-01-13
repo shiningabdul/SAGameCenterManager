@@ -7,7 +7,18 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SAGameCenterManager.h"
 
-@interface SAViewController : UIViewController
+@class SAGameCenterManager;
+
+@interface SAViewController : UIViewController <GKGameCenterControllerDelegate> {
+    SAGameCenterManager *gameCenterManager;
+}
+
+- (IBAction)submitToLeaderboardButtonPressed:(id)sender;
+
+- (IBAction)submitAchievementsButtonPressed:(id)sender;
+
+- (IBAction)resetAchievementsButtonPressed:(id)sender;
 
 @end
