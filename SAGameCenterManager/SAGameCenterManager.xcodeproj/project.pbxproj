@@ -20,7 +20,7 @@
 		96440DD21762E40600B0295A /* SAViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96440DD01762E40600B0295A /* SAViewController_iPhone.xib */; };
 		96440DD51762E40600B0295A /* SAViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96440DD31762E40600B0295A /* SAViewController_iPad.xib */; };
 		965C03441852BF4500636AA8 /* SAGameCenterManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 965C03431852BF4500636AA8 /* SAGameCenterManager.m */; };
-		965C03481852C1B200636AA8 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 965C03471852C1B200636AA8 /* GameKit.framework */; };
+		96DCF9C81888CAA6002FAC16 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96DCF9C71888CAA6002FAC16 /* GameKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,7 +43,7 @@
 		96440DD41762E40600B0295A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/SAViewController_iPad.xib; sourceTree = "<group>"; };
 		965C03421852BF4500636AA8 /* SAGameCenterManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SAGameCenterManager.h; sourceTree = "<group>"; };
 		965C03431852BF4500636AA8 /* SAGameCenterManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAGameCenterManager.m; sourceTree = "<group>"; };
-		965C03471852C1B200636AA8 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
+		96DCF9C71888CAA6002FAC16 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,10 +51,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				965C03481852C1B200636AA8 /* GameKit.framework in Frameworks */,
 				96440DB61762E40600B0295A /* UIKit.framework in Frameworks */,
 				96440DB81762E40600B0295A /* Foundation.framework in Frameworks */,
 				96440DBA1762E40600B0295A /* CoreGraphics.framework in Frameworks */,
+				96DCF9C81888CAA6002FAC16 /* GameKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,7 +81,7 @@
 		96440DB41762E40600B0295A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				965C03471852C1B200636AA8 /* GameKit.framework */,
+				96DCF9C71888CAA6002FAC16 /* GameKit.framework */,
 				96440DB51762E40600B0295A /* UIKit.framework */,
 				96440DB71762E40600B0295A /* Foundation.framework */,
 				96440DB91762E40600B0295A /* CoreGraphics.framework */,
@@ -147,13 +147,13 @@
 			attributes = {
 				CLASSPREFIX = SA;
 				LastUpgradeCheck = 0460;
-				ORGANIZATIONNAME = shiningabdul;
+				ORGANIZATIONNAME = shiningdevelopers;
 				TargetAttributes = {
 					96440DB11762E40600B0295A = {
 						DevelopmentTeam = 559UUQT2Q5;
 						SystemCapabilities = {
 							com.apple.GameCenter = {
-								enabled = 0;
+								enabled = 1;
 							};
 						};
 					};

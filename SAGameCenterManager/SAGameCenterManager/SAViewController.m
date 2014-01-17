@@ -36,7 +36,7 @@
 
 - (IBAction)submitAchievementsButtonPressed:(id)sender
 {
-    [gameCenterManager reportAchievementIdentifier:@"game_center_test_achievement" percentComplete:100];
+    [gameCenterManager reportAchievementIdentifier:@"game_center_manager_test_achievement" percentComplete:100];
 }
 
 - (IBAction)resetAchievementsButtonPressed:(id)sender
