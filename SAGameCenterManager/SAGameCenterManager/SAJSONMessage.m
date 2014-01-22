@@ -13,6 +13,7 @@
 @synthesize messageType;
 @synthesize randomNumber;
 @synthesize unreliableMessageIdentifier;
+@synthesize textMessage;
 
 #pragma mark - Initialization
 
@@ -21,7 +22,7 @@
     if(self = [super init])
     {
         randomNumber = 0;
-        messageType = MPMessageTypeStart;
+        messageType = SAMessageTypeStart;
         unreliableMessageIdentifier = 0;
     }
     
@@ -32,24 +33,29 @@
 {
     if(self = [super init])
     {
-        messageType = (MPMessageType)[[jsonData objectForKey:@"messageType"] intValue];
+        messageType = (SAMessageType)[[jsonData objectForKey:@"messageType"] intValue];
 
-        if (messageType == MPMessageTypeRandomNumber)
+        if (messageType == SAMessageTypeRandomNumber)
         {
             randomNumber = [[jsonData objectForKey:@"randomNumber"] intValue];
+        }
+        else if (messageType == SAMessageTypeText)
+        {
+            textMessage = [jsonData objectForKey:@"textMessage"];
         }
     }
     
     return self;
 }
 
-- (id)initWithMessageType:(MPMessageType)aMessageType
+- (id)initWithMessageType:(SAMessageType)aMessageType
 {
     if(self = [super init])
     {
         messageType = aMessageType;
         randomNumber = 0;
         unreliableMessageIdentifier = 0;
+        textMessage = @"";
     }
     
     return self;
@@ -58,17 +64,24 @@
 - (NSDictionary *)serializableData
 {
     NSDictionary *dictionary = nil;
-    if (messageType == MPMessageTypeRandomNumber)
+    if (messageType == SAMessageTypeRandomNumber)
     {
         dictionary = [[NSDictionary alloc] initWithObjectsAndKeys:
                       [NSNumber numberWithInt:messageType], @"messageType",
                       [NSNumber numberWithInt:randomNumber], @"randomNumber",
                       nil];
     }
-    else if (messageType == MPMessageTypeStart)
+    else if (messageType == SAMessageTypeStart)
     {
         dictionary = [[NSDictionary alloc] initWithObjectsAndKeys:
                       [NSNumber numberWithInt:messageType], @"messageType",
+                      nil];
+    }
+    else if (messageType == SAMessageTypeText)
+    {
+        dictionary = [[NSDictionary alloc] initWithObjectsAndKeys:
+                      [NSNumber numberWithInt:messageType], @"messageType",
+                      textMessage, @"textMessage",
                       nil];
     }
     

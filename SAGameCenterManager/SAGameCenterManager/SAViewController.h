@@ -10,11 +10,13 @@
 #import "SAGameCenterManager.h"
 #import "SAJSONMessage.h"
 
-@interface SAViewController : UIViewController <GKGameCenterControllerDelegate, SAGameCenterManagerDelegate> {
+@interface SAViewController : UIViewController <GKGameCenterControllerDelegate, SAGameCenterManagerDelegate, UITextFieldDelegate> {
     SAGameCenterManager *gameCenterManager;
 }
 
 @property (strong, nonatomic) IBOutlet UILabel *playerNumberLabel;
+@property (strong, nonatomic) IBOutlet UITextField *textField;
+@property (strong, nonatomic) IBOutlet UILabel *otherPlayerMessage;
 
 - (IBAction)submitToLeaderboardButtonPressed:(id)sender;
 
@@ -29,6 +31,8 @@
 - (IBAction)showGameCenter:(id)sender;
 
 - (IBAction)findMatch:(id)sender;
+
+- (IBAction)sendMessage:(id)sender;
 
 - (void)matchStarted;
 - (void)matchEnded;

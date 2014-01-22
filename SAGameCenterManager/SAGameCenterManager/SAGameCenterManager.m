@@ -178,7 +178,7 @@
         // Generate a random number to determine which player is player one
         gameState.randomNumber = arc4random() % 10001;
         
-        SAJSONMessage *message = [[SAJSONMessage alloc] initWithMessageType:MPMessageTypeRandomNumber];
+        SAJSONMessage *message = [[SAJSONMessage alloc] initWithMessageType:SAMessageTypeRandomNumber];
         message.randomNumber = gameState.randomNumber;
         [self sendMessage:message withDataMode:GKMatchSendDataReliable];
     }
@@ -203,7 +203,7 @@
         // Else we have to resend the numbers
         gameState.randomNumber = arc4random() % 1000001;
         
-        SAJSONMessage *message = [[SAJSONMessage alloc] initWithMessageType:MPMessageTypeRandomNumber];
+        SAJSONMessage *message = [[SAJSONMessage alloc] initWithMessageType:SAMessageTypeRandomNumber];
         message.randomNumber = gameState.randomNumber;
         [self sendMessage:message withDataMode:GKMatchSendDataReliable];
     }
@@ -215,7 +215,7 @@
         if(!gameState.isPlayerOne)
         {
             [delegate matchStarted];
-            SAJSONMessage *message = [[SAJSONMessage alloc] initWithMessageType:MPMessageTypeStart];
+            SAJSONMessage *message = [[SAJSONMessage alloc] initWithMessageType:SAMessageTypeStart];
             [self sendMessage:message withDataMode:GKMatchSendDataReliable];
         }
     }
@@ -294,7 +294,7 @@
         // Generate a random number to determine which player is player one
         gameState.randomNumber = arc4random() % 10001;
         
-        SAJSONMessage *message = [[SAJSONMessage alloc] initWithMessageType:MPMessageTypeRandomNumber];
+        SAJSONMessage *message = [[SAJSONMessage alloc] initWithMessageType:SAMessageTypeRandomNumber];
         message.randomNumber = gameState.randomNumber;
         [self sendMessage:message withDataMode:GKMatchSendDataReliable];
     }

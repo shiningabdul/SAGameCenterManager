@@ -22,6 +22,14 @@
     gameCenterManager = [[SAGameCenterManager alloc] initWithViewController:self];
     [gameCenterManager authenticateLocalPlayer];
     gameCenterManager.delegate = self;
+    
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]
+                                   initWithTarget:self
+                                   action:@selector(dismissKeyboard)];
+    
+    [self.view addGestureRecognizer:tap];
+    
+    self.textField.delegate = self;
 }
 
 - (void)didReceiveMemoryWarning
@@ -60,9 +68,28 @@
     [gameCenterManager showGameCenter];
 }
 
+- (IBAction)sendMessage:(id)sender
+{
+    SAJSONMessage *jsonMessage = [[SAJSONMessage alloc] initWithMessageType:SAMessageTypeText];
+    jsonMessage.textMessage = [self.textField text];
+    [gameCenterManager sendMessage:jsonMessage withDataMode:GKMatchSendDataReliable];
+}
+
 - (void)gameCenterViewControllerDidFinish:(GKGameCenterViewController *)gameCenterViewController
 {
     [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+-(void)dismissKeyboard
+{
+    [self.textField resignFirstResponder];
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)theTextField
+{
+    [self sendMessage:nil];
+    
+    return YES;
 }
 
 #pragma mark - Multiplayer
@@ -88,9 +115,13 @@
 
 - (void)receivedMessage:(SAJSONMessage *)message fromPlayer:(NSString *)playerID
 {
-    if(message.messageType == MPMessageTypeStart)
+    if(message.messageType == SAMessageTypeStart)
     {
         ;
+    }
+    else if (message.messageType == SAMessageTypeText)
+    {
+        [self.otherPlayerMessage setText:message.textMessage];
     }
 }
 
