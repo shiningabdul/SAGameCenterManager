@@ -8,17 +8,31 @@
 
 #import <UIKit/UIKit.h>
 #import "SAGameCenterManager.h"
+#import "SAJSONMessage.h"
 
-@class SAGameCenterManager;
-
-@interface SAViewController : UIViewController <GKGameCenterControllerDelegate> {
+@interface SAViewController : UIViewController <GKGameCenterControllerDelegate, SAGameCenterManagerDelegate> {
     SAGameCenterManager *gameCenterManager;
 }
+
+@property (strong, nonatomic) IBOutlet UILabel *playerNumberLabel;
 
 - (IBAction)submitToLeaderboardButtonPressed:(id)sender;
 
 - (IBAction)submitAchievementsButtonPressed:(id)sender;
 
 - (IBAction)resetAchievementsButtonPressed:(id)sender;
+
+- (IBAction)showAchievements:(id)sender;
+
+- (IBAction)showLeaderboards:(id)sender;
+
+- (IBAction)showGameCenter:(id)sender;
+
+- (IBAction)findMatch:(id)sender;
+
+- (void)matchStarted;
+- (void)matchEnded;
+- (void)receivedMessage:(SAJSONMessage *)message fromPlayer:(NSString *)playerID;
+- (void)playerOrderDecided:(BOOL)ifIsPlayerOne;
 
 @end

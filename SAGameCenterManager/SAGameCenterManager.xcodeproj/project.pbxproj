@@ -20,6 +20,8 @@
 		96440DD21762E40600B0295A /* SAViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96440DD01762E40600B0295A /* SAViewController_iPhone.xib */; };
 		96440DD51762E40600B0295A /* SAViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96440DD31762E40600B0295A /* SAViewController_iPad.xib */; };
 		965C03441852BF4500636AA8 /* SAGameCenterManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 965C03431852BF4500636AA8 /* SAGameCenterManager.m */; };
+		96B1D616188F3F87001C92B1 /* SAMultiplayerGameState.m in Sources */ = {isa = PBXBuildFile; fileRef = 96B1D615188F3F87001C92B1 /* SAMultiplayerGameState.m */; };
+		96B1D619188F4116001C92B1 /* SAJSONMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 96B1D618188F4116001C92B1 /* SAJSONMessage.m */; };
 		96DCF9C81888CAA6002FAC16 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96DCF9C71888CAA6002FAC16 /* GameKit.framework */; };
 /* End PBXBuildFile section */
 
@@ -43,6 +45,10 @@
 		96440DD41762E40600B0295A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/SAViewController_iPad.xib; sourceTree = "<group>"; };
 		965C03421852BF4500636AA8 /* SAGameCenterManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SAGameCenterManager.h; sourceTree = "<group>"; };
 		965C03431852BF4500636AA8 /* SAGameCenterManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAGameCenterManager.m; sourceTree = "<group>"; };
+		96B1D614188F3F87001C92B1 /* SAMultiplayerGameState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SAMultiplayerGameState.h; sourceTree = "<group>"; };
+		96B1D615188F3F87001C92B1 /* SAMultiplayerGameState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAMultiplayerGameState.m; sourceTree = "<group>"; };
+		96B1D617188F4116001C92B1 /* SAJSONMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SAJSONMessage.h; sourceTree = "<group>"; };
+		96B1D618188F4116001C92B1 /* SAJSONMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAJSONMessage.m; sourceTree = "<group>"; };
 		96DCF9C71888CAA6002FAC16 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -96,6 +102,10 @@
 				96440DC51762E40600B0295A /* SAAppDelegate.m */,
 				965C03421852BF4500636AA8 /* SAGameCenterManager.h */,
 				965C03431852BF4500636AA8 /* SAGameCenterManager.m */,
+				96B1D617188F4116001C92B1 /* SAJSONMessage.h */,
+				96B1D618188F4116001C92B1 /* SAJSONMessage.m */,
+				96B1D614188F3F87001C92B1 /* SAMultiplayerGameState.h */,
+				96B1D615188F3F87001C92B1 /* SAMultiplayerGameState.m */,
 				96440DCD1762E40600B0295A /* SAViewController.h */,
 				96440DCE1762E40600B0295A /* SAViewController.m */,
 				96440DD01762E40600B0295A /* SAViewController_iPhone.xib */,
@@ -197,10 +207,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96B1D616188F3F87001C92B1 /* SAMultiplayerGameState.m in Sources */,
 				96440DC21762E40600B0295A /* main.m in Sources */,
 				96440DC61762E40600B0295A /* SAAppDelegate.m in Sources */,
 				965C03441852BF4500636AA8 /* SAGameCenterManager.m in Sources */,
 				96440DCF1762E40600B0295A /* SAViewController.m in Sources */,
+				96B1D619188F4116001C92B1 /* SAJSONMessage.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

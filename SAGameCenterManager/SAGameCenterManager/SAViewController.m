@@ -21,6 +21,7 @@
     
     gameCenterManager = [[SAGameCenterManager alloc] initWithViewController:self];
     [gameCenterManager authenticateLocalPlayer];
+    gameCenterManager.delegate = self;
 }
 
 - (void)didReceiveMemoryWarning
@@ -44,9 +45,65 @@
     [gameCenterManager resetAchievements];
 }
 
+- (IBAction)showAchievements:(id)sender
+{
+    [gameCenterManager showAchievements];
+}
+
+- (IBAction)showLeaderboards:(id)sender
+{
+    [gameCenterManager showLeaderboard:@"game_center_test_leaderboard"];
+}
+
+- (IBAction)showGameCenter:(id)sender
+{
+    [gameCenterManager showGameCenter];
+}
+
 - (void)gameCenterViewControllerDidFinish:(GKGameCenterViewController *)gameCenterViewController
 {
     [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+#pragma mark - Multiplayer
+- (IBAction)findMatch:(id)sender
+{
+    [gameCenterManager findMatch];
+}
+
+- (void)matchStarted
+{
+    ;
+}
+
+- (void)matchEnded
+{
+    ;
+}
+
+- (void)disconnectMatch
+{
+    [gameCenterManager endMatch];
+}
+
+- (void)receivedMessage:(SAJSONMessage *)message fromPlayer:(NSString *)playerID
+{
+    if(message.messageType == MPMessageTypeStart)
+    {
+        ;
+    }
+}
+
+- (void)playerOrderDecided:(BOOL)ifIsPlayerOne
+{
+    if(ifIsPlayerOne)
+    {
+        [self.playerNumberLabel setText:@"Player One"];
+    }
+    else
+    {
+        [self.playerNumberLabel setText:@"Player Two"];
+    }
 }
 
 @end
